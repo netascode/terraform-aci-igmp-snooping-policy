@@ -3,7 +3,7 @@
 
 # Terraform ACI IGMP Snooping Policy Module
 
-Description
+Manages ACI IGMP Snooping Policy
 
 Location in GUI:
 `Tenants` » `XXX` » `Policies` » `Protocol` » `IGMP Snoop`
