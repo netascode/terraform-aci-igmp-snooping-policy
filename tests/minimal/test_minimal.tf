@@ -46,4 +46,46 @@ resource "test_assertions" "igmpSnoopPol" {
     got         = data.aci_rest_managed.igmpSnoopPol.content.descr
     want        = ""
   }
+
+  equal "adminSt" {
+    description = "adminSt"
+    got         = data.aci_rest_managed.igmpSnoopPol.content.adminSt
+    want        = "enabled"
+  }
+
+  equal "ctrl" {
+    description = "ctrl"
+    got         = data.aci_rest_managed.igmpSnoopPol.content.ctrl
+    want        = ""
+  }
+
+  equal "lastMbrIntvl" {
+    description = "lastMbrIntvl"
+    got         = data.aci_rest_managed.igmpSnoopPol.content.lastMbrIntvl
+    want        = "1"
+  }
+
+  equal "queryIntvl" {
+    description = "queryIntvl"
+    got         = data.aci_rest_managed.igmpSnoopPol.content.queryIntvl
+    want        = "125"
+  }
+
+  equal "rspIntvl" {
+    description = "rspIntvl"
+    got         = data.aci_rest_managed.igmpSnoopPol.content.rspIntvl
+    want        = "10"
+  }
+
+  equal "startQueryCnt" {
+    description = "startQueryCnt"
+    got         = data.aci_rest_managed.igmpSnoopPol.content.startQueryCnt
+    want        = "2"
+  }
+
+  equal "startQueryIntvl" {
+    description = "startQueryIntvl"
+    got         = data.aci_rest_managed.igmpSnoopPol.content.startQueryIntvl
+    want        = "31"
+  }
 }

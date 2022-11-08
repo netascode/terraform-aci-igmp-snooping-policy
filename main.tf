@@ -5,7 +5,7 @@ resource "aci_rest_managed" "igmpSnoopPol" {
     name            = var.name
     descr           = var.description
     adminSt         = var.admin_state == true ? "enabled" : "disabled"
-    ctrl            = join(",", concat(var.fast_leave == true ? ["fast-leave"] : [], var.querier == true ? ["querier"] : ["querier"]))
+    ctrl            = join(",", concat(var.fast_leave == true ? ["fast-leave"] : [], var.querier == true ? ["querier"] : []))
     lastMbrIntvl    = var.last_member_query_interval
     queryIntvl      = var.query_interval
     rspIntvl        = var.query_response_interval
