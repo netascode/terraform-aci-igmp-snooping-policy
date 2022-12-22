@@ -1,15 +1,5 @@
-variable "name" {
-  description = "IGMP Snooping Policy name."
-  type        = string
-
-  validation {
-    condition     = can(regex("^[a-zA-Z0-9_.-]{0,64}$", var.name))
-    error_message = "Allowed characters: `a`-`z`, `A`-`Z`, `0`-`9`, `_`, `.`, `-`. Maximum characters: 64."
-  }
-}
-
 variable "tenant" {
-  description = "IGMP Snooping Policy's tenant name."
+  description = "Tenant name."
   type        = string
 
   validation {
@@ -18,8 +8,18 @@ variable "tenant" {
   }
 }
 
+variable "name" {
+  description = "IGMP snooping policy name."
+  type        = string
+
+  validation {
+    condition     = can(regex("^[a-zA-Z0-9_.-]{0,64}$", var.name))
+    error_message = "Allowed characters: `a`-`z`, `A`-`Z`, `0`-`9`, `_`, `.`, `-`. Maximum characters: 64."
+  }
+}
+
 variable "description" {
-  description = "IGMP Snooping Policy description."
+  description = "IGMP snooping policy description."
   type        = string
   default     = ""
 
@@ -30,25 +30,25 @@ variable "description" {
 }
 
 variable "admin_state" {
-  description = "IGMP Snooping Policy administritative state."
+  description = "IGMP snooping policy administrative state."
   type        = bool
   default     = true
 }
 
 variable "fast_leave" {
-  description = "IGMP Snooping Policy flag for Fast-Leave."
+  description = "IGMP snooping policy flag for Fast-Leave."
   type        = bool
   default     = false
 }
 
 variable "querier" {
-  description = "IGMP Snooping Policy flag for querier."
+  description = "IGMP snooping policy flag for querier."
   type        = bool
   default     = false
 }
 
 variable "last_member_query_interval" {
-  description = "IGMP Snooping Policy last member query interval. Allowed values between 1-25."
+  description = "IGMP snooping policy last member query interval. Allowed values between 1-25."
   type        = number
   default     = 1
 
@@ -59,7 +59,7 @@ variable "last_member_query_interval" {
 }
 
 variable "query_interval" {
-  description = "IGMP Snooping Policy query interval. Allowed values between 1-18000."
+  description = "IGMP snooping policy query interval. Allowed values between 1-18000."
   type        = number
   default     = 125
 
@@ -70,7 +70,7 @@ variable "query_interval" {
 }
 
 variable "query_response_interval" {
-  description = "IGMP Snooping Policy query response interval. Allowed values between 1-25."
+  description = "IGMP snooping policy query response interval. Allowed values between 1-25."
   type        = number
   default     = 10
 
@@ -81,7 +81,7 @@ variable "query_response_interval" {
 }
 
 variable "start_query_count" {
-  description = "IGMP Snooping Policy start query count. Allowed values between 1-10."
+  description = "IGMP snooping policy start query count. Allowed values between 1-10."
   type        = number
   default     = 2
 
@@ -92,7 +92,7 @@ variable "start_query_count" {
 }
 
 variable "start_query_interval" {
-  description = "IGMP Snooping Policy start query interval. Allowed values between 1-18000."
+  description = "IGMP snooping policy start query interval. Allowed values between 1-18000."
   type        = number
   default     = 31
 

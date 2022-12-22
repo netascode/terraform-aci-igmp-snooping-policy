@@ -5,5 +5,5 @@ output "dn" {
 
 output "name" {
   value       = aci_rest_managed.igmpSnoopPol.content.name
-  description = "IGMP Snooping Policy name."
+  description = "IGMP snooping policy name."
 }

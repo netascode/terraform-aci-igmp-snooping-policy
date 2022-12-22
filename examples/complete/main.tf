@@ -1,6 +1,6 @@
 module "aci_igmp_snooping_policy" {
   source  = "netascode/igmp-snooping-policy/aci"
-  version = ">= 0.0.1"
+  version = ">= 0.1.0"
 
   name                       = "ABC"
   tenant                     = "TEN1"
